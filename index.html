@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página para cadastro e listagem de produtos, permitindo registrar informações e exibir produtos cadastrados com ordenação por valor.">
+    <meta name="keywords" content="cadastro de produtos, listagem de produtos, ordenação por valor, sistema de cadastro, desenvolvimento web, formulário de cadastro">
+    <meta name="author" content="Nelson Martins">
+    <title>Cadastro e Listagem de Produtos</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/stylesDesktop.css">
+
+    <!-- Fontes que serão usadas no projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> <!-- Rubik -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> <!-- IBM Plex Mono-->
+    
+</head>
+<body>
+        <!-- Cabeçalho da página-->
+        <header id="cabecalho">
+            <section id="secLogo">
+                <a href="index.html"><p><img src="assets/imgs/logo_sem_fundo.png" alt="Logo do site" id="logo"></p></a>
+            </section>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main id="secForm">
+            <form id="formCadastro">
+                <!-- Nome do produto -->
+                <section class="inputs">
+                    <label for="nomeProduto">Nome do Produto:</label>
+                    <input type="text" name="nomeProduto" id="nomeProduto" placeholder="Digite o nome do produto" required>
+                </section>
+                <!-- Campo que adiciona uma descrição ao produt -->
+                <section class="inputs">
+                    <label for="descProduto">Descrição do Produto:</label>
+                    <textarea name="descProduto" id="descProduto" placeholder="Digite a descrição do produto" required></textarea>
+                </section>
+                <!-- Valor do produto -->
+                <section class="inputs">
+                    <label for="valorProduto">Valor do Produto:</label>
+                    <input type="number" step="0.01" min="0" name="valorProduto" id="valorProduto" placeholder="Digite o valor do produto" required>
+                </section>
+                <!-- Definindo a disponibilidade do produto -->
+                <fieldset id="secDisponibilidade">
+                    <legend id="legendaDisponibilidade">Disponível para venda?</legend>
+        
+                    <label for="disponivel-sim">
+                        <input type="radio" name="disponivel" id="disponivel-sim" value="sim" required> Sim
+                    </label>
+                    <label for="disponivel-nao">
+                        <input type="radio" name="disponivel" id="disponivel-nao" value="nao" required> Não
+                    </label>
+                </fieldset>
+                <!-- Envio do formulário -->
+                <input type="submit" value="Enviar" id="btnEnviar">
+            </form>
+        </main>
+
+        <!-- Tabela para listagem de produtos -->
+        <section id="secTabela">
+            <h2 id="h2Tabela">Produtos Cadastrados</h2>
+            <table id="tabela">
+                <thead id="cabecalhoTabela">
+                    <tr class="linhas">
+                        <th class="titulosTabela">Nome</th>
+                        <th class="titulosTabela">Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Produtos serão adicionados aqui -->
+                    <tr class="linhas">
+                        <td class="itensTabela">PC GAMER</td>
+                        <td class="itensTabela">4.000</td>
+                    </tr>
+                    <tr>
+                        <td class="itensTabela">PC GAMER</td>
+                        <td class="itensTabela">4.000</td>
+                    </tr>
+                    <tr>
+                        <td class="itensTabela">PC GAMER</td>
+                        <td class="itensTabela">4.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Botão para abrir o formulário -->
+        <section id="secBotaoCadastro">
+            <button id="btnCadastro">Cadastrar Produto</button>
+        </section>
+
+    <!-- Js -->
+    <script src="assets/scripts/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+/* Estilos para o desktop */
+@media (min-width: 600px) {
+    #btnCadastro, #btnEnviar {
+        width: 15rem;
+    }
+
+    #formCadastro {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 2rem;
+    }
+}
