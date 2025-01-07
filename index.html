@@ -33,24 +33,29 @@
         <!-- Conteúdo principal -->
         <main id="secForm">
             <form id="formCadastro">
+                <section id="formAviso">
+                    <!-- aviso de erro no preenchimento -->
+                </section>
                 <!-- Nome do produto -->
                 <section class="inputs">
-                    <label for="nomeProduto">Nome do Produto:</label>
+                    <span><label for="nomeProduto">Nome do Produto:<span class="vermelho">*</span></label></span>
                     <input type="text" name="nomeProduto" id="nomeProduto" placeholder="Digite o nome do produto" required>
                 </section>
                 <!-- Campo que adiciona uma descrição ao produt -->
                 <section class="inputs">
                     <label for="descProduto">Descrição do Produto:</label>
-                    <textarea name="descProduto" id="descProduto" placeholder="Digite a descrição do produto" required></textarea>
+                    <textarea name="descProduto" id="descProduto" placeholder="Digite a descrição do produto"></textarea>
                 </section>
                 <!-- Valor do produto -->
                 <section class="inputs">
-                    <label for="valorProduto">Valor do Produto:</label>
+                    <span><label for="valorProduto">Valor do Produto:<span class="vermelho">*</span></label></span>
                     <input type="number" step="0.01" min="0" name="valorProduto" id="valorProduto" placeholder="Digite o valor do produto" required>
                 </section>
                 <!-- Definindo a disponibilidade do produto -->
                 <fieldset id="secDisponibilidade">
-                    <legend id="legendaDisponibilidade">Disponível para venda?</legend>
+                    <span>
+                        <legend id="legendaDisponibilidade">Disponível para venda?<span class="vermelho">*</span></legend>
+                    </span>
         
                     <label for="disponivel-sim">
                         <input type="radio" name="disponivel" id="disponivel-sim" value="sim" required> Sim
@@ -76,25 +81,13 @@
                 </thead>
                 <tbody id="corpoTabela">
                     <!-- Produtos serão adicionados aqui -->
-                    <tr class="linhas">
-                        <td class="itensTabela">PC GAMER</td>
-                        <td class="itensTabela">4.000</td>
-                    </tr>
-                    <tr>
-                        <td class="itensTabela">PC GAMER</td>
-                        <td class="itensTabela">4.000</td>
-                    </tr>
-                    <tr>
-                        <td class="itensTabela">PC GAMER</td>
-                        <td class="itensTabela">4.000</td>
-                    </tr>
                 </tbody>
             </table>
         </section>
 
         <!-- Botão para abrir o formulário -->
         <section id="secBotaoCadastro">
-            <button id="btnCadastro">Cadastrar Produto</button>
+            <button id="btnCadastro">Cadastrar novo Produto</button>
         </section>
 
     <!-- Js -->

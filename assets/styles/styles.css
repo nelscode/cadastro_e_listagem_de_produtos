@@ -20,8 +20,10 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Cabeçalho da página */
+
 #cabecalho {
-    margin: 1rem 0 1rem 0;
+    margin: 3.5rem auto 0.5rem auto;
 }
 
 #cabecalho, #formCadastro {
@@ -37,12 +39,87 @@ body {
     margin: 0; padding: 0;
 }
 
-#secBotaoCadastro {
-    max-width: 100%;
-    margin: 0;
+/* Formulário */
+
+#secForm {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#btnCadastro, #btnEnviar {
+#formCadastro {
+    width: 100%; 
+    padding: 1rem;
+    max-width: 600px; 
+    display: flex;
+    gap: 1.1rem;
+    margin: 0 auto 0 auto;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#formCadastro label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#nomeProduto, #valorProduto, #descProduto {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: var(--ibm);
+    
+}
+
+#descProduto {
+    min-height: 5rem;
+    resize: none;
+}
+
+/* Retirando as setas de incremento e decremento do valor */
+#valorProduto::-webkit-inner-spin-button, 
+#valorProduto::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#secDisponibilidade {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+}
+
+#secDisponibilidade legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.vermelho {
+    color: red;
+}
+
+#aviso {
+    background-color: red;
+    padding: 0.5rem;
+    text-align: left;
+    align-self: left;
+    color: white;
+}
+
+/* Botões */
+
+#btnEnviar {
+    margin-top: 1rem;
+}
+
+#btnEnviar, #btnCadastro {
     width: 12rem;
     font-size: 1rem;
     background: var(--roxo);
@@ -61,73 +138,49 @@ body {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-#formCadastro {
-    width: 100%; 
-    max-width: 600px; 
-    display: flex;
-    gap: 1.1rem;
-    margin: 2rem auto 0 auto;
+#logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-}
-
-#nomeProduto, #descProduto {
-    font-family: var(--rubik);
-}
-
-#formCadastro label {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-#nomeProduto, #valorProduto, #descProduto {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-#descProduto {
-    min-height: 5rem;
-    resize: none;
-    font-family: var(--rubik);
-}
-
-#secDisponibilidade {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border: none;
-}
-
-#secDisponibilidade legend {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
+/* Tabela */
 
 #secTabela {
-    margin: 0;
+    width: 100%;
+    margin: 0 auto 1rem auto;
     padding: 1rem;
-    display: none;
 }
 
 #h2Tabela {
-    margin: 0.5rem auto;
+    margin-bottom: 2rem;
+}
+
+#tabela {
+    width: 100%;
+    max-width: 600px; 
 }
 
 #tabela, th, td{
-    border: 0.1rem solid black;
+    border: 0.2rem solid black;
     padding: 0.5rem;
     border-collapse:collapse;
 }
 
-#btnCadastro {
-    display: none;
+table tr td:nth-child(2) {
+    text-align: right;
+}
+
+/* Botões */
+
+#secBotaoCadastro, #secTabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Display: none; */
+
+#secTabela, #secBotaoCadastro { /* Inicialmente todos serão none */
+   display: none;
 }
